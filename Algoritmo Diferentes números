@@ -1,0 +1,190 @@
+print('{:=^34}'.format('NÚMERO PRIMO'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+cont = 0
+for c in range(1, aux + 1):
+    if aux % c == 0:
+        cont += 1
+if cont == 2:
+    print(f'O número {numero} é primo.')
+else:
+    print(f'O número {numero} não é primo.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO PERFEITO'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+soma = 0
+for c in range(1,aux):
+    if aux % c == 0:
+        soma += c
+if soma == numero:
+    print(f'O número {numero} é perfeito.')
+else:
+    print(f'O número {numero} não é perfeito.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO ABUNDANTE'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+soma = 0
+for c in range(1,aux):
+    if aux % c == 0:
+        soma += c
+if soma > numero:
+    print(f'O número {numero} é abundante.')
+else:
+    print(f'O número {numero} não é abundante.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO DEFICIENTE'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+soma = 0
+for c in range(1,aux):
+    if aux % c == 0:
+        soma += c
+if soma < numero:
+    print(f'O número {numero} é deficiente.')
+else:
+    print(f'O número {numero} não é deficiente.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO AMIGÁVEL'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+print('Informe outro número :')
+num = int(input())
+ax = num
+soma = soma1 =0
+for c in range(1,aux):
+    if aux % c == 0:
+        soma += c
+for c in range(1,ax):
+    if ax % c == 0:
+        soma1 += c
+if soma == num and soma1 == numero:
+    print(f'O número {numero} e {num} são amigáveis.')
+else:
+    print(f'O número {numero} e {num} não são amigáveis.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO NARCISISTA'))
+print('Informe um número :')
+numero = int(input())
+aux = numero
+soma = acumulador = expoente = 0
+while aux != 0:
+    expoente += 1
+    aux //= 10
+aux = numero
+while aux != 0:
+    acumulador = aux % 10
+    soma += acumulador ** expoente
+    aux //= 10
+if soma == numero:
+    print(f'O número {numero} é narcisista.')
+else:
+    print(f'O número {numero} não é narcisista.')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO CURIOSO'))
+print("Informe um número")
+num1 = int(input())
+aux = num1
+cont = cont4 = na = r = rest = 0
+potencia = num1 ** 2
+while aux != 0:
+    aux //= 10
+    cont += 1
+    aux2 = potencia
+while aux2 != 0:
+    aux2 //= 10
+    cont4 += 1
+while potencia != 0:
+    na *= 10
+    na += potencia % 10
+    potencia //= 10
+while na != 0:
+    if r >= cont4 - cont:
+        rest *= 10
+        rest += na % 10
+    na //= 10
+    r += 1
+if rest == num1:
+    print(f"O número {num1} é curioso.")
+else:
+    print(f"O número {num1} não é curioso.")
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO FELIZ'))
+print("Informe um número :")
+num = int(input())
+ax = num
+aux = n = c = 0
+while ax != 1 and c != 100:
+    n = aux = ax
+    ax = 0
+    while n != 0:
+        ax += (n % 10) * (n % 10)
+        n //= 10
+    c += 1
+    print(f"{aux} >>> {ax}")
+if ax == 1:
+    print(f"O número {num} é feliz.")
+else:
+    print(f"O número {num} não é feliz.")
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO FATORIAL'))
+print('Digite um número para encontrar seu Fatorial:')
+n = int(input())
+c = n
+f = 1
+while (c > 0):
+    f *= c
+    c -= 1
+print(f'O fatorial de {n} é {f}')
+print('=' * 34)
+
+# Fim do codigo
+print()
+
+print('{:=^34}'.format('NÚMERO PALÍNDROMO'))
+print('Informe um número :')
+numero = str(input()).strip().lower()
+reverse = numero[::-1]
+if reverse == numero:
+    print(f'O número {numero} é palíndromo.')
+else:
+    print(f'O número {numero} não é palíndromo.')
+print('=' * 34)
